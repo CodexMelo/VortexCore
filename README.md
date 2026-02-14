@@ -1,4 +1,3 @@
-# ✅ **DOCUMENTAÇÃO CORRIGIDA PARA GITHUB**
 🌀 VortexCore
 ![Version](https://img.shields.io/badge/version-1.0.0-brightgreen)
 ![Paper](https://img.shields.io/badge/Paper-1.21.11-blue)
