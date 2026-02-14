@@ -1,17 +1,15 @@
 # ✅ **DOCUMENTAÇÃO CORRIGIDA PARA GITHUB**
-
-Aqui está sua documentação **100% corrigida e pronta**:
-
-```markdown
-# 🌀 VORTEXCORE
-
-![Version](https://img.shields.io/badge/version-1.0.5--ALPHA-brightgreen)
+🌀 VortexCore
+![Version](https://img.shields.io/badge/version-1.0.0-brightgreen)
 ![Paper](https://img.shields.io/badge/Paper-1.21.11-blue)
 ![Java](https://img.shields.io/badge/Java-21-orange)
-![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-**Sistema completo de Clãs, Vilas, Dungeons e Guerras para Minecraft Paper 1.21.11**
+**Sistema completo de Clãs, Vilas, Dungeons e Guerras para Minecraft Paper 1.21.11+**
 
+Transforme seu servidor em um MMO real: clãs como cidades, guerras estratégicas com totens + boss líder, logística física limitada, dungeons por vila e economia integrada via Vault.
+
+**[GitHub](https://github.com/CodexMelo/VortexCore) • [Download JAR](https://github.com/CodexMelo/VortexCore/raw/main/VortexCore-1.0.0.jar)**
 > ⚠️ **VERSÃO ALFA** - Ainda em desenvolvimento! Relate bugs nas [Issues do GitHub](https://github.com/CodexMelo/VortexCore/issues)
 
 ---
