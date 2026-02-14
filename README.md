@@ -1,7 +1,3 @@
-# ✅ **DOCUMENTAÇÃO CORRIGIDA PARA GITHUB**
-
-Aqui está sua documentação **100% corrigida e pronta**:
-
 ```markdown
 # 🌀 VORTEXCORE
 
