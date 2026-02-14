@@ -445,5 +445,3 @@ Copyright (c) 2025 Codex_Melo & yggdrasil_Melo
 
 **VortexCore v1.0.5-ALFA - 2026** 🚀
 ```
-
-**PRONTO! Documentação 100% corrigida para o GitHub!** 🚀
