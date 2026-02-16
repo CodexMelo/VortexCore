@@ -1,5 +1,5 @@
 
-![Version](https://img.shields.io/badge/version-1.0.0-brightgreen)
+![Version](https://img.shields.io/badge/version-1.0.6-brightgreen)
 ![Paper](https://img.shields.io/badge/Paper-1.21.11-blue)
 ![Java](https://img.shields.io/badge/Java-21-orange)
 
