@@ -4,38 +4,44 @@
 ![Java](https://img.shields.io/badge/Java-21-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+🌀 **VortexCore v1.0.6**
+
 **Sistema completo de Clãs, Vilas, Dungeons e Guerras para Minecraft Paper 1.21.11+**
 
-Transforme seu servidor em um MMO real: clãs como cidades, guerras estratégicas com totens + boss líder, logística física limitada, dungeons por vila e economia integrada via Vault.
+Transforme seu servidor em um MMO real: clãs como cidades, guerras estratégicas com totens + boss líder, logística física limitada, dungeons por vila (com grupos de até 6 jogadores), cooldown individual e economia integrada via Vault.
 
-**[GitHub](https://github.com/CodexMelo/VortexCore) • [Download JAR](https://github.com/CodexMelo/VortexCore/raw/main/VortexCore-1.0.0.jar)**
-> ⚠️ **VERSÃO ALFA** - Ainda em desenvolvimento! Relate bugs nas [Issues do GitHub](https://github.com/CodexMelo/VortexCore/issues)
+**[⬇️ Download JAR](https://github.com/CodexMelo/VortexCore/releases) • [GitHub](https://github.com/CodexMelo/VortexCore)**
+
+> ✅ **VERSÃO 1.0.6** \- Versão estável e otimizada! Reporte bugs nas Issues do GitHub
 
 ---
 
 ## 📋 ÍNDICE
-- [📥 Download](#-download)
-- [📥 Instalação](#-instalação)
-- [⚙️ Configuração](#️-configuração)
-- [👑 Comandos de Clã](#-comandos-de-clã)
-- [🏘️ Comandos de Vilas](#️-comandos-de-vilas)
-- [🌀 Comandos de Dungeons](#-comandos-de-dungeons)
-- [⚔️ Comandos de Guerra](#️-comandos-de-guerra)
-- [🚚 Comandos de Logística](#-comandos-de-logística)
-- [📜 Comandos de Quests](#-comandos-de-quests)
-- [👤 Comandos de Chat](#-comandos-de-chat)
-- [🎯 Placeholders](#-placeholders)
-- [🔧 Permissões](#-permissões)
-- [❓ FAQ](#-faq)
-- [📝 Licença](#-licença)
+* [📥 Download](#-download)
+* [📥 Instalação](#-instalação)
+* [⚙️ Configuração](#️-configuração)
+* [🆕 Novidades da 1.0.6](#-novidades-da-106)
+* [👑 Comandos de Clã](#-comandos-de-clã)
+* [🏘️ Comandos de Vilas](#️-comandos-de-vilas)
+* [🏛️ Comandos de Cidade (CITY)](#️-comandos-de-cidade-city)
+* [🌀 Comandos de Dungeons](#-comandos-de-dungeons)
+* [👥 Comandos de Grupos (Party)](#-comandos-de-grupos-party)
+* [⚔️ Comandos de Guerra](#️-comandos-de-guerra)
+* [🚚 Comandos de Logística](#-comandos-de-logística)
+* [📜 Comandos de Quests](#-comandos-de-quests)
+* [👤 Comandos de Chat](#-comandos-de-chat)
+* [🎯 Placeholders](#-placeholders)
+* [🔧 Permissões](#-permissões)
+* [❓ FAQ](#-faq)
+* [📝 Licença](#-licença)
 
 ---
 
 ## 📥 DOWNLOAD
 
-O arquivo do plugin está hospedado no GitHub Releases devido ao limite de tamanho do Spigot.
+O arquivo do plugin está hospedado no GitHub Releases.
 
-[**⬇️ BAIXAR VORTEXCORE 1.0.5-ALFA**](https://github.com/CodexMelo/VortexCore/releases/download/alfa/VortexCore-1.0.5-ALFA.jar)
+**⬇️ [BAIXAR VORTEXCORE 1.0.6](https://github.com/CodexMelo/VortexCore/releases/download/v1.0.6/VortexCore-1.0.6.jar)**
 
 **Alternativa:** [Ver todas as releases](https://github.com/CodexMelo/VortexCore/releases)
 
@@ -44,14 +50,14 @@ O arquivo do plugin está hospedado no GitHub Releases devido ao limite de taman
 ## 📥 INSTALAÇÃO
 
 ### **Requisitos:**
-- Servidor **Paper 1.21.11** ou superior
-- **Java 21** ou superior
-- **Vault** (obrigatório)
-- **PlaceholderAPI** (recomendado para placeholders)
-- **WorldEdit** (opcional, para schematics de dungeons)
+* Servidor **Paper 1.21.11** ou superior
+* **Java 21** ou superior
+* **Vault** (obrigatório)
+* **PlaceholderAPI** (recomendado para placeholders)
+* **WorldEdit** (opcional, para schematics de dungeons)
 
 ### **Passo a passo:**
-1. Baixe o arquivo `VortexCore-1.0.5-ALFA.jar` do link acima
+1. Baixe o arquivo `VortexCore-1.0.6.jar` do link acima
 2. Coloque na pasta `plugins/` do seu servidor
 3. Reinicie o servidor
 4. Configure os arquivos em `plugins/VortexCore/`
@@ -68,7 +74,7 @@ clans:
   max-name-length: 20
   min-players: 1
   protection-new-clan-days: 0
-  
+
   level-requirements:
     1:
       exp: 0
@@ -97,7 +103,7 @@ villages:
   max-name-length: 20
   base-production: 10
   vulnerability-window: "20:00-22:00"
-  
+
   level-requirements:
     1:
       storage: 10000
@@ -108,12 +114,12 @@ villages:
     3:
       storage: 50000
       features: ["dungeon_portal", "port", "walls"]
-      
+
   dungeon:
     entry-cost: "5 gold_ingot"
     cooldown-minutes: 5
     time-limit-minutes: 30
-    max-players: 5
+    max-players: 6
 
 # Sistema de Guerra
 wars:
@@ -121,7 +127,7 @@ wars:
   preparation-minutes: 5
   duration-minutes: 30
   objectives-to-win: 3
-  
+
   rewards:
     attacker-win: "village_ownership"
     defender-win: "500 exp, protection_7_days"
@@ -133,12 +139,12 @@ economy:
   base-upkeep-cost: 100.0
   village-upkeep-multiplier: 50.0
   level-upkeep-multiplier: 25.0
-  
+
   resource-values:
     iron: 0.5
     gold: 2.0
     rare: 50.0
-    
+
   taxes:
     normal: 0.10  # 10%
     allied: 0.05  # 5%
@@ -150,14 +156,13 @@ logistics:
     land-speed: 0.4
     sea-speed: 0.6
     road-bonus-per-level: 0.1
-    
+
   roads:
     blocks:
       - "STONE_BRICKS"
       - "OAK_PLANKS" 
       - "COBBLESTONE"
       - "STONE_SLAB"
-      
     mob-spawn-reduction: 0.15
 
 # Mensagens
@@ -167,7 +172,7 @@ messages:
   war-declared: "§cGuerra declarada contra %village%!"
   dungeon-entered: "§eEntrando na dungeon %name%!"
   transport-created: "§aTransporte criado! Leve os recursos com cuidado."
-  
+
   errors:
     clan-tag-exists: "§cEsta tag já está em uso!"
     not-in-clan: "§cVocê não está em um clã!"
@@ -202,6 +207,26 @@ quests:
 
 ---
 
+## 🆕 NOVIDADES DA 1.0.6
+
+### ✨ **Novas Funcionalidades**
+| Funcionalidade | Descrição |
+|----------------|-----------|
+| **Sistema de Grupos (Party)** | `/grupo criar`, convidar, entrar juntos na dungeon |
+| **Portal Funcional** | Clique no bloco roxo (CRYING_OBSIDIAN) para entrar |
+| **Limite de Dungeons** | 2 dungeons simultâneas por vila |
+| **Cooldown Individual** | 2 horas após sair da dungeon |
+| **Barra de Progresso** | Visual no cooldown |
+| **Comandos Admin** | `/clan addxp`, `/clan setlevel`, `/clan setexp` |
+
+### 🔧 **Otimizações**
+- Timer de spawners: 1s → 2s (-50% CPU)
+- Timer principal: 1s → 3s (-66% CPU)
+- Limite de 3 spawns por execução
+- Remoção de logs de debug do console
+
+---
+
 ## 👑 COMANDOS DE CLÃ
 
 | Comando | Descrição | Permissão |
@@ -220,7 +245,17 @@ quests:
 | `/clan disband` | Dissolve o clã | `vortexcore.clan.disband` |
 | `/clan city info` | Info da CITY | `vortexcore.clan.city` |
 | `/clan city set <vila>` | Define CITY | `vortexcore.clan.city` |
+| `/clan territorio` | Info do território | - |
 | `/clan chat` | Alterna chat do clã | - |
+
+### **Comandos Admin**
+| Comando | Descrição | Permissão |
+|---------|-----------|-----------|
+| `/clan addxp <qtd> [tag]` | Adiciona XP ao clã | `vortexcore.admin` |
+| `/clan setlevel <nivel> [tag]` | Define nível do clã | `vortexcore.admin` |
+| `/clan setexp <xp> [tag]` | Define XP do clã | `vortexcore.admin` |
+| `/clan forcesave` | Força salvamento | `vortexcore.admin` |
+| `/clan reload` | Recarrega config | `vortexcore.admin` |
 
 ---
 
@@ -233,12 +268,24 @@ quests:
 | `/vila recursos` | Recursos do clã | - |
 | `/vila depositar` | Deposita itens | `vortexcore.village.manage` |
 | `/vila retirar <ferro> <ouro> <raros>` | Retira recursos | `vortexcore.village.manage` |
-| `/vila melhorar` | Melhora vila | - |
-| `/vila porto` | Constrói porto (lvl 3) | - |
-| `/vila dungeon` | Portal de dungeon (lvl 2) | - |
-| `/vila defesa` | Gerencia guardas | - |
-| `/vila muros` | Constrói muros (lvl 3) | - |
+| `/vila melhorar` | Melhora vila | `vortexcore.village.manage` |
+| `/vila porto` | Constrói porto (lvl 3) | `vortexcore.village.manage` |
+| `/vila dungeon` | Lista dungeons | `vortexcore.village.manage` |
+| `/vila dungeon confirmar <id>` | Vincula dungeon | `vortexcore.village.manage` |
+| `/vila defesa` | Mostra defesas | - |
+| `/vila defesa contratar <qtd>` | Contrata guardas | `vortexcore.village.manage` |
+| `/vila muros` | Constrói muros (lvl 3) | `vortexcore.village.manage` |
 | `/vila vulnerabilidade <inicio> <fim>` | Janela vulnerável | `vortexcore.village.manage` |
+
+---
+
+## 🏛️ COMANDOS DE CIDADE (CITY)
+
+| Comando | Descrição | Permissão |
+|---------|-----------|-----------|
+| `/clan city info` | Informações da CITY | - |
+| `/clan city set <vila>` | Define uma vila como CITY | Líder |
+| `/clan territorio` | Info do território atual | - |
 
 ---
 
@@ -247,10 +294,10 @@ quests:
 ### **Públicos**
 | Comando | Descrição |
 |---------|-----------|
-| `/dungeon list` | Lista dungeons |
-| `/dungeon info <id>` | Info da dungeon |
+| `/dungeon list` | Lista dungeons disponíveis |
+| `/dungeon info <id>` | Informações da dungeon |
 | `/dungeon entrar <id>` | Entra na dungeon (custa 5 ouro) |
-| `/dungeon sair` | Sai da dungeon |
+| `/dungeon sair` | Sai da dungeon atual |
 
 ### **Admin**
 | Comando | Descrição |
@@ -275,14 +322,30 @@ quests:
 
 ---
 
+## 👥 COMANDOS DE GRUPOS (PARTY)
+
+| Comando | Descrição |
+|---------|-----------|
+| `/grupo criar <dungeon>` | Cria um novo grupo (não entra) |
+| `/grupo entrar <líder>` | Entra em um grupo existente |
+| `/grupo sair` | Sai do grupo atual |
+| `/grupo convidar <jogador>` | Convida jogador |
+| `/grupo expulsar <jogador>` | Expulsa jogador (líder) |
+| `/grupo listar` | Lista grupos ativos |
+| `/grupo info` | Informações do grupo |
+| `/grupo iniciar` | Inicia a dungeon (leva todos) |
+
+---
+
 ## ⚔️ COMANDOS DE GUERRA
 
 | Comando | Descrição |
 |---------|-----------|
 | `/guerra declarar <vila>` | Declara guerra |
-| `/guerra info` | Info da guerra |
+| `/guerra info` | Informações da guerra |
 | `/guerra objetivos` | Objetivos da guerra |
 | `/guerra rendição` | Rende-se |
+| `/guerra rendição confirmar` | Confirma rendição |
 
 ---
 
@@ -312,6 +375,7 @@ quests:
 |---------|-----------|
 | `/chat` | Alterna chat do clã |
 | `/chat <mensagem>` | Envia mensagem no chat do clã |
+| `!mensagem` | Envia para o clã (qualquer lugar) |
 
 ---
 
@@ -333,11 +397,15 @@ quests:
 | `%vortex_clan_villages_display%` | Vilas atuais/máx |
 | `%vortex_clan_bonus%` | Bônus logística |
 | `%vortex_clan_upkeep%` | Custo de manutenção |
+| `%vortex_clan_days%` | Dias desde criação |
 | `%vortex_city_name%` | Nome da CITY |
 | `%vortex_city_totems%` | Totens ativos/total |
 | `%vortex_city_villages%` | Vilas da CITY |
 | `%vortex_city_max_villages%` | Máx. vilas da CITY |
 | `%vortex_city_villages_display%` | Vilas atuais/máx |
+| `%vortex_village_name%` | Nome da vila atual |
+| `%vortex_village_level%` | Nível da vila atual |
+| `%vortex_village_resources%` | Recursos da vila atual |
 | `%vortex_dungeon_status%` | Em dungeon? |
 | `%vortex_dungeon_name%` | Nome da dungeon |
 | `%vortex_dungeon_time%` | Tempo decorrido |
@@ -349,6 +417,9 @@ quests:
 | `%vortex_resources_gold%` | Total de ouro |
 | `%vortex_resources_rare%` | Total de raros |
 | `%vortex_resources_display%` | Display formatado |
+| `%vortex_war_status%` | Status da guerra |
+| `%vortex_war_objectives%` | Objetivos da guerra |
+| `%vortex_war_time%` | Tempo restante da guerra |
 
 ---
 
@@ -366,8 +437,7 @@ quests:
 | `vortexcore.village.create` | Criar vila | true |
 | `vortexcore.village.manage` | Gerenciar vilas | OP |
 | `vortexcore.war.declare` | Declarar guerra | true |
-| `vortexcore.war.surrender` | Render-se | OP |
-| `vortexcore.dungeon.enter` | Entrar em dungeon | true |
+| `vortexcore.dungeon.enter` | Entrar em dungeons | true |
 | `vortexcore.dungeon.admin` | Admin de dungeons | OP |
 | `vortexcore.logistics.transport` | Criar transporte | true |
 | `vortexcore.logistics.attack` | Atacar transporte | true |
@@ -376,41 +446,29 @@ quests:
 
 ## ❓ FAQ
 
-### **Como criar um clã?**
-```bash
-1. Complete as quests com /quest progress
-2. /clan criar TAG "Nome do Clã"
-```
+### **O plugin é gratuito?**
+Sim! VortexCore é completamente gratuito e open-source.
 
-### **Como criar a CITY do clã?**
-```bash
-1. Crie uma vila
-2. /clan city set <nome_da_vila>
-```
+### **Precisa de Vault?**
+Sim, o Vault é obrigatório para o funcionamento da economia.
 
-### **Como criar uma dungeon?**
-```bash
-1. /dungeon admin create moria
-2. /dungeon admin schematic moria dungeon_moria
-3. /dungeon admin edit moria
-4. Configure spawners e boss
-5. /dungeon admin save moria
-```
+### **Os dados são salvos?**
+Sim, tudo é persistido em um banco de dados SQLite (`vortex.db`).
 
-### **Como declarar guerra?**
-```bash
-1. Espere a vila ficar vulnerável
-2. /guerra declarar <vila>
-```
+### **O que acontece com os portais após reiniciar?**
+O plugin recria automaticamente os metadados dos portais ao iniciar.
 
-### **Como transportar recursos?**
-```bash
-/transporte criar <origem> <destino> terra
-# Ou por mar
-/transporte criar <origem> <destino> mar
-```
+### **Qual o limite de jogadores por dungeon?**
+6 jogadores por dungeon, e no máximo 2 dungeons simultâneas por vila.
+
+### **Tem cooldown para entrar na dungeon?**
+Sim, 2 horas após sair da dungeon (cooldown individual).
 
 ---
+
+
+
+**Desenvolvido com ❤️ por [Codex_Melo](https://github.com/CodexMelo) e [yggdrasil_Melo](https://github.com/yggdrasilMelo)** 🎮🚀
 
 ## 📝 LICENÇA
 
