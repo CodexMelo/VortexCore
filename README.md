@@ -450,8 +450,7 @@ quests:
 Sim! VortexCore é completamente gratuito e open-source.
 
 ### **Precisa de Vault?**
-Sim, o Vault é obrigatório para o funcionamento da economia.
-
+Sim, o Vault é obrigatório para o funcionamento.
 ### **Os dados são salvos?**
 Sim, tudo é persistido em um banco de dados SQLite (`vortex.db`).
 
